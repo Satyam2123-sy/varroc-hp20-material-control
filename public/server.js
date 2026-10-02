@@ -26,7 +26,7 @@ function publicRoom(room) {
   return {code:room.code, entries:room.entries, members:room.members, createdAt:room.createdAt};
 }
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 app.get('/health', (_, res) => res.json({ok:true}));
 
 io.on('connection', socket => {
